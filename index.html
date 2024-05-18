@@ -8,24 +8,47 @@
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
 </head>
 <body class="relative">
-    <div id="modal" class="absolute-cover grid place-content-center backdrop-blur-md">
-        <div class="z-20 bg-white shadow-xl rounded-xl pb-4 w-[90%] sm:w-1/2 lg:w-[60%] max-w-[900px] space-y-4 text-center mx-auto">
-            <div class="card-header border-b-2 border-black flex-between gap-5 py-4 px-4">
-                <div class="flex-center gap-2 ">
-                    <i data-lucide="octagon-alert"></i>
-                    <h2 class="font-bold">DISCLAIMER</h2>
-                </div>
-                <i id="modal-close" onclick="closeModal()" class="hover:scale-105 duration-200 ease-in cursor-pointer" data-lucide="circle-x"></i>
+
+    <div id="main">
+        <div id="loader">
+            <div id="topheading">
+                <h5 class="reveal">
+                    Hackathon
+                </h5>
+                <h5 class="reveal">&copy; 2024</h5>
             </div>
-            <div>
-                <p>
+            <h1 class="reveal flex gap-2 text-center">
+                <span>Raisina</span>
+                <span id="highlight">Hacks</span>
+                <span>coming</span>
+                <span>soon</span>
+            </h1>
+
+            <div class="absolute bottom-6 w-full flex-center">
+                <div class="w-[30px] h-[30px] bg-black border-white border-y-2 rounded-full animate-spin"></div>
+            </div>
+        </div>
+        <div id="green"></div>
+    </div>
+
+
+    <div id="modal" class="z-50 absolute scale-0 grid place-content-center backdrop-blur-md">
+        <div class="z-50 bg-white shadow-xl rounded-xl pb-4 w-[95%]  sm:w-1/2 lg:w-[60%] max-w-[1000px] space-y-4 text-center mx-auto">
+            <div class="card-header sm:text-center border-b-2 border-black py-3">
+            <h2 class="font-bold text-xl">DISCLAIMER</h2>
+            </div>
+            <div class="px-3">
+                <p class="max-sm:text-left">
                     This is a community organized hackathon and we are not associated with Raisina Hills or Govt. Of India in anyway.
                 </p>
             </div>
+            <button id="modal-close" onclick="closeModal()" class=" bg-black shadow-xl text-white px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 hover:shadow-xl cursor-none ">
+                I understand
+            </button>
         </div>
     </div>
 
-    <div class="grid place-content-center w-screen h-screen overflow-hidden text-center">
+    <div id="content" class="grid text-black scale-0 place-content-center w-screen h-screen overflow-hidden text-center">
         <div class="space-y-12">
             <div class="space-y-4">
                 <h1 class="text-4xl md:text-6xl font-bold">
@@ -42,20 +65,16 @@
         </div>
     </div>
 
-    <div class="absolute z-10 bottom-24 sm:bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
+    <div class="absolute z-10 bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="instagram"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="twitter"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="facebook"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="linkedin"></i></a>
     </div>
-
-    <!-- <p class="absolute bottom-0 text-center w-full md:py-2 bg-white text-sm">
-        <b>DISCLAIMER</b>: This is a community organized hackathon and we are not associated with Raisina Hills or Govt. Of India in anyway.
-    </p> -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/animation.js"></script>
     <script>
         
         lucide.createIcons();
