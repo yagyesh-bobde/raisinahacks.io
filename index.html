@@ -9,19 +9,18 @@
 </head>
 <body class="relative">
     <div id="modal" class="absolute-cover grid place-content-center backdrop-blur-md">
-        <div class="z-20 bg-white shadow-xl rounded-xl pb-4 w-[90%] sm:w-1/2 lg:w-[60%] max-w-[900px] space-y-4 text-center mx-auto">
-            <div class="card-header border-b-2 border-black flex-between gap-5 py-4 px-4">
-                <div class="flex-center gap-2 ">
-                    <i data-lucide="octagon-alert"></i>
-                    <h2 class="font-bold">DISCLAIMER</h2>
-                </div>
-                <i id="modal-close" onclick="closeModal()" class="hover:scale-105 duration-200 ease-in cursor-pointer" data-lucide="circle-x"></i>
+        <div class="z-20 bg-white shadow-xl rounded-xl pb-4 w-[95%]  sm:w-1/2 lg:w-[60%] max-w-[1000px] space-y-4 text-center mx-auto">
+            <div class="card-header sm:text-center border-b-2 border-black py-3">
+            <h2 class="font-bold text-xl">DISCLAIMER</h2>
             </div>
-            <div>
-                <p>
+            <div class="px-3">
+                <p class="max-sm:text-left">
                     This is a community organized hackathon and we are not associated with Raisina Hills or Govt. Of India in anyway.
                 </p>
             </div>
+            <button id="modal-close" onclick="closeModal()" class=" bg-black shadow-xl text-white px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 hover:shadow-xl cursor-none ">
+                I understand
+            </button>
         </div>
     </div>
 
@@ -42,7 +41,7 @@
         </div>
     </div>
 
-    <div class="absolute z-10 bottom-24 sm:bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
+    <div class="absolute z-10 bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="instagram"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="twitter"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="facebook"></i></a>
