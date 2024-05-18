@@ -71,8 +71,8 @@ tl.from(".child span", {
     right: 0, 
     bottom: 0, 
     left: 0,
-    duration: 1, 
-    delay: -0.8,
+    duration: 0.1, 
+    delay: -1,
     scale: 1,
     ease: Circ.easeInOut,
   })
