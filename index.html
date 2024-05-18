@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <div class="absolute z-10 bottom-24 sm:bottom-16  md:bottom-12 bg-white/40 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
+    <div class="absolute z-10 bottom-24 sm:bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 rounded-xl">
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="instagram"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="twitter"></i></a>
         <a href="/" class="duration-300 hover:scale-105 rounded-full flex items-center justify-center p-2 hover:bg-white"><i data-lucide="facebook"></i></a>
@@ -55,21 +55,9 @@
 
 
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./scripts/index.js"></script>
     <script>
-        setTimeout(() => {
-                document.getElementById('modal').style.display = 'none !important';
-        }, 3000)
-
-
-        const modalClose = document.getElementById('modal-close');
-
-        const closeModal = (e) => {
-                console.log('clicked');
-                document.getElementById('modal').style.display = 'none';
-        }
-
         
-
         lucide.createIcons();
         
     </script>
