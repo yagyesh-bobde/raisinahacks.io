@@ -1,0 +1,38 @@
+/*! DOCUMENT */
+
+*, ::after, ::before {
+    padding: 0; 
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    background:  radial-gradient( rgba(255,255,255, 1),  rgba(200, 200, 200, 0)), url("../images/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* backdrop-filter: ; */
+}
+
+/* Position */
+.absolute-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* FLEXBOX */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
