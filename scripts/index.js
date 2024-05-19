@@ -7,6 +7,15 @@
 const modalClose = document.getElementById("modal-close");
 modalClose.addEventListener("click", () => {
   document.getElementById("modal").style.display = "none";
+
+
+
+  gsap.to("#content", {
+    scale: 1,
+    duration: 1,
+    delay: -0.4,
+    ease: Circ.easeInOut,
+  });
 })
 
 function revealToSpan() {
@@ -54,7 +63,6 @@ tl.from(".child span", {
   })
   .to("#green", {
     height: "100%",
-    top: 0,
     duration: 1,
     ease: Circ.easeInOut,
   })
@@ -67,18 +75,18 @@ tl.from(".child span", {
   })
   .to("#modal", {
     display: "block",
-    top: 0, 
-    right: 0, 
-    bottom: 0, 
+    top: 0,
+    right: 0,
+    bottom: 0,
     left: 0,
-    duration: 0.1, 
+    duration: 0.01,
     delay: -1,
     scale: 1,
     ease: Circ.easeInOut,
   })
-  .to("#content", {
-    scale: 1,
-    duration: 1,
-    delay: -0.4,
+  .to("#modal-dialog", {
+    opacity: 1, 
+    duartion: 0.2,
+    delay: -0.5,
     ease: Circ.easeInOut,
   })
