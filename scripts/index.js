@@ -3,35 +3,17 @@
 //       document.getElementById("modal").style.display = "none !important";
 //     }, 3000);
 // })
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("submitbutton").addEventListener("click", submitForm);
+// document.onload = () => {
+//   // document
+//   // .getElementById("preregisterbtn")
+//   // .addEventListener("click", submitForm);
+  
+// }
 
-  document.getElementById("preregisterbtn").addEventListener("click", () => {
-    let t2 = gsap.timeline()
-    t2.to("#registermodal", {
-      top: 0,
-      right: 0,
-      bottom: 0,
-      left: 0,
-      duration: 0.01,
-      delay: -1,
-      scale: 1,
-      ease: Circ.easeInOut,
-    })
-    .to("#register-dialog", {
-      opacity: 1,
-      duration: 0.2,
-      delay: -0.5,
-      ease: Circ.easeInOut,
-    })
-  });
-})
 
 const modalClose = document.getElementById("modal-close");
 modalClose.addEventListener("click", () => {
   document.getElementById("modal").style.display = "none";
-
-
   let t3 = gsap.timeline();
   t3.to("#content", {
     scale: 1,
@@ -44,30 +26,43 @@ modalClose.addEventListener("click", () => {
     delay: -0.5,
     ease: Circ.easeInOut,
   });
-})
+});
 
 
-function submitForm(e) {
-  console.log("submitting form");
-  let modal = document.getElementById("registermodal");
-  let dialog = document.getElementById("register-dialog");
+const closeModal = () => {
+  document.getElementById("modal").style.display = "none";
+  let t3 = gsap.timeline();
+  t3.to("#content", {
+    scale: 1,
+    duration: 1,
+    delay: -0.4,
+    ease: Circ.easeInOut,
+  }).to("#soon", {
+    x: 0,
+    duration: 0.5,
+    delay: -0.5,
+    ease: Circ.easeInOut,
+  });
+};
+
+
+function submitForm() {
   let email = document.getElementById("email").value;
-
+  console.log("alksdjf")
   if (email === "" || email === null || email === undefined || !email.toString().includes("@") || !email.toString().includes(".") ){
     // alert("Please enter your email address");
     document.getElementById("email").value = ""
     showToast("Please enter a valid email address");
     return;
   }
-
   // submit email to form
   const url =
     "https://docs.google.com/forms/d/e/1FAIpQLScn1KM92pTFLYJkrJHJ9_FSZ4kic-con2I4_VUwoZSd9H396g/formResponse?usp=pp_url&entry.1076367748=";
 
-  showToast("Wohoo 🎉! You have successfully registered.");
+  showToast("Wohoo 🎉! You have joined waitlist.");
   fetch(url + email)
   document.getElementById("email").value = "";
-  modal.style.display = "none";
+  // modal.style.display = "none";
   return;
 } 
 
