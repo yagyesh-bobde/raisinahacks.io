@@ -32,11 +32,16 @@ modalClose.addEventListener("click", () => {
   document.getElementById("modal").style.display = "none";
 
 
-
-  gsap.to("#content", {
+  let t3 = gsap.timeline();
+  t3.to("#content", {
     scale: 1,
     duration: 1,
     delay: -0.4,
+    ease: Circ.easeInOut,
+  }).to("#soon", {
+    x: 0,
+    duration: 0.5,
+    delay: -0.5,
     ease: Circ.easeInOut,
   });
 })
@@ -156,3 +161,4 @@ tl.from(".child span", {
     delay: -0.5,
     ease: Circ.easeInOut,
   })
+  

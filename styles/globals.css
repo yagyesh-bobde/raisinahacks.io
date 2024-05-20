@@ -111,4 +111,8 @@ body {
     display: inline-block;
   }
 
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 
