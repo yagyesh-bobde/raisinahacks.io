@@ -3,6 +3,29 @@
 //       document.getElementById("modal").style.display = "none !important";
 //     }, 3000);
 // })
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("submitbutton").addEventListener("click", submitForm);
+
+  document.getElementById("preregisterbtn").addEventListener("click", () => {
+    let t2 = gsap.timeline()
+    t2.to("#registermodal", {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      duration: 0.01,
+      delay: -1,
+      scale: 1,
+      ease: Circ.easeInOut,
+    })
+    .to("#register-dialog", {
+      opacity: 1,
+      duration: 0.2,
+      delay: -0.5,
+      ease: Circ.easeInOut,
+    })
+  });
+})
 
 const modalClose = document.getElementById("modal-close");
 modalClose.addEventListener("click", () => {
@@ -17,6 +40,47 @@ modalClose.addEventListener("click", () => {
     ease: Circ.easeInOut,
   });
 })
+
+
+function submitForm(e) {
+  console.log("submitting form");
+  let modal = document.getElementById("registermodal");
+  let dialog = document.getElementById("register-dialog");
+  let email = document.getElementById("email").value;
+
+  if (email === "" || email === null || email === undefined || !email.toString().includes("@") || !email.toString().includes(".") ){
+    // alert("Please enter your email address");
+    document.getElementById("email").value = ""
+    showToast("Please enter a valid email address");
+    return;
+  }
+
+  // submit email to form
+  const url =
+    "https://docs.google.com/forms/d/e/1FAIpQLScn1KM92pTFLYJkrJHJ9_FSZ4kic-con2I4_VUwoZSd9H396g/formResponse?usp=pp_url&entry.1076367748=";
+
+  showToast("Wohoo 🎉! You have successfully registered.");
+  fetch(url + email)
+  document.getElementById("email").value = "";
+  modal.style.display = "none";
+  return;
+} 
+
+
+function showToast(title) {
+  let toast = document.getElementById("toast");
+  let toastTitle = document.getElementById("toast-title");
+
+  toastTitle.innerHTML = title;
+  toast.style.display = "block";
+
+
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 2000);
+}
+
+
 
 function revealToSpan() {
   document.querySelectorAll(".reveal").forEach(function (elem) {
@@ -34,6 +98,8 @@ function revealToSpan() {
     elem.appendChild(spanParent);
   });
 }
+
+
 
 
 

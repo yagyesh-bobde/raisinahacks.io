@@ -32,8 +32,8 @@
     </div>
 
 
-    <div id="modal" class="z-50 absolute scale-0 grid place-content-center backdrop-blur-md">
-        <div id="modal-dialog" class="z-50 opacity-0 bg-white shadow-xl rounded-xl pb-4 w-[95%] sm:w-1/2 lg:w-[1/4] lg:max-w-[760px] space-y-4 text-center mx-auto">
+    <div id="modal" class="z-10 absolute scale-0 grid place-content-center backdrop-blur-md">
+        <div id="modal-dialog" class="z-10 opacity-0 bg-white shadow-xl rounded-xl pb-4 w-[95%] sm:w-1/2 lg:w-[1/4] lg:max-w-[760px] space-y-4 text-center mx-auto">
             <div class="card-header sm:text-center border-b-2 border-black py-3">
             <h2 class="font-bold text-xl">DISCLAIMER</h2>
             </div>
@@ -65,6 +65,7 @@
             </div>
 
             <button
+                id="preregisterbtn"
                 class="inline bg-black shadow-xl text-white px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 cursor-pointer">
                 Pre-register
             </button>
@@ -83,6 +84,27 @@
     </div>
 
 
+        <div id="registermodal" class="z-10 absolute backdrop-blur-md scale-0 grid place-content-center">
+            <div  id="register-dialog" class="z-10 opacity-0 bg-white shadow-xl rounded-xl pb-4 w-[95%] sm:min-w-[450px] sm:w-1/2 lg:w-[1/4] lg:max-w-[760px] space-y-4 text-center mx-auto">
+                <div class="card-header sm:text-center border-b-2 border-black py-3">
+                    <h2 class="font-bold text-xl uppercase">Pre Register</h2>
+                </div>
+                <div class="flex items-center gap-4 px-3">
+                    <input class="w-full py-2 rounded-xl shadow-md border-2 border-gray-400 bg-transparent px-2" id="email" type="email" placeholder="Enter your email">
+                    <button type="button" id="submitbutton"  class=" bg-black shadow-xl text-white px-4 py-2 rounded-xl hover:bg-white hover:text-black duration-300 hover:shadow-xl  ">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- toast -->
+        <div id="toast" class="fixed hidden z-30 bottom-8 right-4  bg-white min-w-[250px] text-nowrap p-5 rounded-lg">
+            <h1 class="font-semibold" id="toast-title">
+                
+            </h1>
+        </div>
 
     <!-- socials -->
     <div class="absolute z-10 bottom-16  md:bottom-12 bg-white/60 shadow-xl w-[90%] md:w-[min-content] left-1/2 right-1/2 -translate-x-1/2 flex items-center justify-between gap-4 md:gap-20 p-3 py-2 rounded-xl">
