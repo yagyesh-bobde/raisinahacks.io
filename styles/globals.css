@@ -1,6 +1,6 @@
 /*! DOCUMENT */
 :root {
-    --green: #14cf93;
+    --green: rgb(124, 151, 160);
 }
 
 *, ::after, ::before {
