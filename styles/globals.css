@@ -1,6 +1,6 @@
 /*! DOCUMENT */
 :root {
-    --green: #14cf93;
+    --green: rgb(124, 151, 160);
 }
 
 *, ::after, ::before {
@@ -69,7 +69,7 @@ body {
 
 #loader h1 #highlight {
     font-style: italic;
-    color: var(--green);
+    color:#6699cc;
 }
 
 #loader #topheading {
