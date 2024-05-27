@@ -59,7 +59,7 @@ function submitForm() {
   const url =
     "https://docs.google.com/forms/d/e/1FAIpQLScn1KM92pTFLYJkrJHJ9_FSZ4kic-con2I4_VUwoZSd9H396g/formResponse?usp=pp_url&entry.1076367748=";
 
-  showToast("Wohoo 🎉! You have joined waitlist.");
+  showToast("Wohoo 🎉! You have joined the waitlist for raisina hacks.");
   fetch(url + email)
   document.getElementById("email").value = "";
   // modal.style.display = "none";
