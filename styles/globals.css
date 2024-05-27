@@ -1,6 +1,6 @@
 /*! DOCUMENT */
 :root {
-    --green: #14cf93;
+    --green: rgb(124, 151, 160);
 }
 
 *, ::after, ::before {
@@ -62,14 +62,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 6vw;
+    font-size: 10vw;
     font-weight: 400;
     word-spacing: 15px;
 }
 
 #loader h1 #highlight {
     font-style: italic;
-    color: var(--green);
+    color:#6699cc;
 }
 
 #loader #topheading {
@@ -111,4 +111,24 @@ body {
     display: inline-block;
   }
 
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
 
+/* coming soon box */
+#soon {
+    top: 25px;
+    transform: translateX(100%);
+}
+
+@media screen and (min-width: 768px) {
+    #soon {
+        top: 50%;
+        transform: translate(100%, -50%);
+    }
+
+    #loader h1 {
+        font-size: 6vw;
+    }
+}
