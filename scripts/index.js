@@ -42,7 +42,12 @@ const closeModal = () => {
     duration: 0.5,
     delay: -0.5,
     ease: Circ.easeInOut,
-  });
+  }).to("#socials", {
+    scale: 1,
+    duration: 0.1,
+    delay: -1,
+    ease: Circ.easeInOut,
+  })
 };
 
 
