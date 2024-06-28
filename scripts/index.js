@@ -20,12 +20,19 @@ modalClose.addEventListener("click", () => {
     duration: 1,
     delay: -0.4,
     ease: Circ.easeInOut,
-  }).to("#soon", {
-    x: 0,
-    duration: 0.5,
-    delay: -0.5,
-    ease: Circ.easeInOut,
-  });
+  })
+    .to("#soon", {
+      x: 0,
+      duration: 0.5,
+      delay: -0.5,
+      ease: Circ.easeInOut,
+    })
+    .to("#socials", {
+      scale: 1,
+      duration: 0.25,
+      delay: -1,
+      ease: Circ.easeInOut,
+    });
 });
 
 
@@ -42,7 +49,13 @@ const closeModal = () => {
     duration: 0.5,
     delay: -0.5,
     ease: Circ.easeInOut,
-  });
+  })
+  .to("#socials", {
+    scale: 1,
+    duration: 0.25,
+    delay: -1,
+    ease: Circ.easeInOut,
+  })
 };
 
 
