@@ -38,13 +38,13 @@
     <div id="main">
         <div id="loader">
             <h1 class="reveal flex gap-2 text-center" style="font-family: SpeedDemon;">
-                <span>Raisina</span>
+                <span>Raisina</span><br/>
                 <span id="highlight">Hacks</span>
-                <span>coming</span>
-                <span>soon</span>
+                <!-- <span>coming</span>
+                <span>soon</span> -->
             </h1>
 
-            <div class="absolute bottom-6 w-full flex-center">
+            <div class="absolute bottom-24 w-full flex-center">
                 <div class="w-[30px] h-[30px] bg-black border-white border-y-2 rounded-full animate-spin"></div>
             </div>
         </div>
@@ -76,7 +76,12 @@
 
 
     <main id="content" class="bg-black relative w-screen h-screen grid place-content-center">
-        <!-- <div class="fixed -bottom-10 -left-10 w-32 h-32 circle-gradient rounded-full"></div> -->
+        <!-- <img class="fixed -right-60 top-0" src="./images/decoration.svg" alt="decoration" /> -->
+        <div class="w-52 fixed -top-10 -right-10 h-52 circle-gradient rounded-full blur-xl opacity-40"></div>
+        <div class="fixed -bottom-16 -left-10">
+            <!-- <img class="" src="./images/decoration.svg" alt="decoration" /> -->
+            <div class=" w-52 h-52 circle-gradient rounded-full blur-2xl opacity-30"></div>
+        </div>
     
         <nav class="fixed top-0 w-[90%] left-1/2 translate-x-[-50%]  py-1 flex items-center justify-between">
             <div>
@@ -94,10 +99,12 @@
         </nav>
     
         <section class="w-[75%] md:w-auto mx-auto text-white space-y-6" id="">
-            <div class="space-y-2">
-                <img src="./images/logo.svg" class="w-[262px] lg:w-[667px]" alt="">
-                <p>
-                    Tackle real world problems, build solutions and win exciting prizes.<br class="max-md:hidden" />Join us
+            <div class="space-y-4 flex flex-col items-center justify-center flex-wrap">
+                <div class="flex items-center justify-center">
+                     <img src="./images/logo.svg" class="w-[262px] lg:w-[600px]" alt="">
+                </div>
+                <p class="text-center">
+                    Tackle real world problems, build solutions and win exciting prizes. <br class="max-md:hidden" />Join us
                     at the Raisina Hacks hackathon.
                 </p>
             </div>

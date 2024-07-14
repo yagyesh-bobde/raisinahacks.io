@@ -1,16 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//     setTimeout(() => {
-//       document.getElementById("modal").style.display = "none !important";
-//     }, 3000);
-// })
-// document.onload = () => {
-//   // document
-//   // .getElementById("preregisterbtn")
-//   // .addEventListener("click", submitForm);
-  
-// }
-
-
 const modalClose = document.getElementById("modal-close");
 modalClose.addEventListener("click", () => {
   document.getElementById("modal").style.display = "none";
