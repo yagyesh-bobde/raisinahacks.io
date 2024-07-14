@@ -21,12 +21,6 @@ modalClose.addEventListener("click", () => {
     delay: -0.4,
     ease: Circ.easeInOut,
   })
-    .to("#soon", {
-      x: 0,
-      duration: 0.5,
-      delay: -0.5,
-      ease: Circ.easeInOut,
-    })
     .to("#socials", {
       scale: 1,
       duration: 0.25,
@@ -44,11 +38,6 @@ const closeModal = () => {
     duration: 1,
     delay: -0.4,
     ease: Circ.easeInOut,
-  }).to("#soon", {
-    x: 0,
-    duration: 0.5,
-    delay: -0.5,
-    ease: Circ.easeInOut,
   })
   .to("#socials", {
     scale: 1,
@@ -59,9 +48,18 @@ const closeModal = () => {
 };
 
 
+function waitlistModalToggle() {
+  // if display none
+  if (document.getElementById("waitlist-modal").style.display === "none") {
+    document.getElementById("waitlist-modal").style.display = "block";
+  } else {
+    document.getElementById("waitlist-modal").style.display = "none";
+  }
+}
+
 function submitForm() {
   let email = document.getElementById("email").value;
-  console.log("alksdjf")
+  // console.log("alksdjf")
   if (email === "" || email === null || email === undefined || !email.toString().includes("@") || !email.toString().includes(".") ){
     // alert("Please enter your email address");
     document.getElementById("email").value = ""
@@ -72,6 +70,7 @@ function submitForm() {
   const url =
     "https://docs.google.com/forms/d/e/1FAIpQLScn1KM92pTFLYJkrJHJ9_FSZ4kic-con2I4_VUwoZSd9H396g/formResponse?usp=pp_url&entry.1076367748=";
 
+  waitlistModalToggle();
   showToast("Wohoo 🎉! You have joined the waitlist for raisina hacks.");
   fetch(url + email)
   document.getElementById("email").value = "";
@@ -112,11 +111,16 @@ function revealToSpan() {
   });
 }
 
+function joinWaitlistEvent() {
+  let buttons = document.querySelectorAll(".btn-join");
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      waitlistModalToggle();
+    });
+  });
+}
 
-
-
-
-
+joinWaitlistEvent();
 revealToSpan();
 
 let tl = gsap.timeline();

@@ -1,3 +1,11 @@
+/* font face */
+@font-face{ 
+    font-family: 'SpeedDemon';
+    src: url("../fonts/SpeedDemon.ttf")
+}
+
+
+
 /*! DOCUMENT */
 :root {
     --green: #7c97a0;
@@ -11,10 +19,6 @@
 body {
     box-sizing: border-box;
     padding: 0;
-    background:  radial-gradient(rgba(255,255,255, 1),  rgba(200, 200, 200, 0)), url("../images/bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* Position */
@@ -44,6 +48,9 @@ body {
     align-items: center;
 }
 
+#waitlist-modal {
+    display: none;
+}
 
 #main {
     position: relative;
@@ -69,7 +76,8 @@ body {
 
 #loader h1 #highlight {
     font-style: italic;
-    color:#6699cc;
+    color:#1E8DF8;
+    font-family: "SpeedDemon";
 }
 
 #loader #topheading {
@@ -123,6 +131,11 @@ body {
 #soon {
     top: 25px;
     transform: translateX(100%);
+}
+
+
+.circle-gradient {
+    background: linear-gradient(180deg, #1E8DF8 0%, rgba(185, 113, 61, 0) 100%);
 }
 
 @media screen and (min-width: 768px) {
